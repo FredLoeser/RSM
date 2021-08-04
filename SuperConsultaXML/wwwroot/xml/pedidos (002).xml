@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PedidosVendas xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Pedido>
+	<Cliente>ARMAZEM DO ENSINO</Cliente>
+	<Pedido>548397</Pedido>
+	<Data>30/01/2021</Data>
+	<Total>639,31</Total>
+	<Produtos>
+		<Produto>
+			<Codigo>LAP0001</Codigo>
+			<Nome>LAPIS HB PARA DESNHO</Nome>
+			<Quantidade>200</Quantidade>
+			<Valor>217,45</Valor>
+		</Produto>		
+		<Produto>
+			<Codigo>CAD002</Codigo>
+			<Nome>CADERNO BROCHURA AZUL</Nome>
+			<Quantidade>50</Quantidade>
+			<Valor>318,11</Valor>
+		</Produto>
+		<Produto>
+			<Codigo>REG010</Codigo>
+			<Nome>REGUA DE FERRO</Nome>
+			<Quantidade>80</Quantidade>
+			<Valor>103,75</Valor>
+		</Produto>
+	</Produtos>
+  </Pedido>
+  <Pedido>
+	<Cliente>CASA DO SABER</Cliente>
+	<Pedido>548401</Pedido>
+	<Data>01/02/2021</Data>
+	<Total>1562,86</Total>
+	<Produtos>
+		<Produto>
+			<Codigo>LAP0002</Codigo>
+			<Nome>LAPISEIRA 0.5 BRANCA</Nome>
+			<Quantidade>1000</Quantidade>
+			<Valor>529,29</Valor>
+		</Produto>		
+		<Produto>
+			<Codigo>AGE008</Codigo>
+			<Nome>AGENDA INFANTIL 2021 </Nome>
+			<Quantidade>100</Quantidade>
+			<Valor>1033,57</Valor>
+		</Produto>
+	</Produtos>
+  </Pedido>
+  <Pedido>
+	<Cliente>VIVENDO E APRENDENDO</Cliente>
+	<Pedido>548222</Pedido>
+	<Data>01/02/2021</Data>
+	<Total>1609,12</Total>
+	<Produtos>
+		<Produto>
+			<Codigo>CAN0002</Codigo>
+			<Nome>CANETA ESFEROGRAFICA VERMELHA</Nome>
+			<Quantidade>300</Quantidade>
+			<Valor>128,38</Valor>
+		</Produto>		
+		<Produto>
+			<Codigo>AGE009</Codigo>
+			<Nome>AGENDA JUVENIL 2021 </Nome>
+			<Quantidade>150</Quantidade>
+			<Valor>1100</Valor>
+		</Produto>
+		<Produto>
+			<Codigo>LAP100</Codigo>
+			<Nome>LAPIS DE COR COM 12 CORES</Nome>
+			<Quantidade>30</Quantidade>
+			<Valor>152,39</Valor>
+		</Produto>
+		<Produto>
+			<Codigo>CAN001</Codigo>
+			<Nome>CANETA ESFEROGRAFICA PRETA</Nome>
+			<Quantidade>300</Quantidade>
+			<Valor>128,38</Valor>
+		</Produto>
+		<Produto>
+			<Codigo>BOR001</Codigo>
+			<Nome>BORRACHA BRANCA MACIA</Nome>
+			<Quantidade>100</Quantidade>
+			<Valor>99,97</Valor>
+		</Produto>
+	</Produtos>
+  </Pedido>  
+  <Pedido>
+	<Cliente>PAPELARIA DO BAIRRO</Cliente>
+	<Pedido>521733</Pedido>
+	<Data>15/01/2021</Data>
+	<Total>5237,11</Total>
+	<Produtos>
+		<Produto>
+			<Codigo>PAP028</Codigo>
+			<Nome>BLOCO DE PAPEL A4</Nome>
+			<Quantidade>500</Quantidade>
+			<Valor>5237,11</Valor>
+		</Produto>		
+	</Produtos>
+  </Pedido>  
+</PedidosVendas>

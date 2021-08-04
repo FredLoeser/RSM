@@ -1,0 +1,84 @@
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+
+<form method="POST">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <label for="cliente">Cliente</label>
+            <input type="text" class="form-control" id="cliente" name="cliente" maxlength="100" value="@Model.Pedido.Cliente">
+        </div>						
+    </div>
+    <div class="row">
+        <div class="form-goup col-md-4">
+            <label for="pedido">Pedido</label>
+            <input type="text" class="form-control" id="pedido" name="pedido" maxlength="9" value="@Model.Pedido.NumeroPedido">
+        </div>
+        <div class="form-goup col-md-4">
+            <label for="pedido">Data</label>
+            <input type="date" class="form-control" id="Data" name="Data" value="@Model.Pedido.Data.ToString("yyyy-MM-dd")">
+        </div>
+        <div class="form-goup col-md-4">
+            <label for="pedido">Preço</label>
+            <input type="text" class="form-control" id="preco" name="preco" step="0.01" min="0" value="@Model.Pedido.Total.ToString("N2")">
+        </div>
+    </div>
+    <div><br></div>
+    <div class="row">
+        <div class="col">
+            <table class="table table-bordered">
+                <thead>
+                    <tr bgcolor="cyan">
+                        <th style="width:2px">Cód. Produto</th>
+                        <th style="width:20px">Nome</th>
+                        <th style="width:2px">Quantidade</th>
+                        <th style="width:5px">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var produto in Model.Pedido.Produtos)
+					{
+                        <tr>
+                            <th scope="row">@produto.Codigo</th>
+                            <td>@produto.Nome</td>
+                            <td>@produto.Quantidade</td>
+                            <td>@produto.Valor</td>
+                        </tr>
+					}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div><br></div>
+    <button type="button" class="btn btn-primary" id="carregar" >Carregar XML</button>
+    <button type="button" class="btn btn-primary" id="gerar" >Gerar arquivo JSON</button>
+    <button type="button" class="btn btn-primary" id="proximo" >Próximo registro</button>
+
+</form>
+
+@section Scripts{
+
+	<script language="javascript">
+        $(document).ready(function(){
+            $("#carregar").click(function(evt){
+                $("form").attr("action","@Url.Action("Teste","Home")");
+                $("form").submit();
+            });
+            $("#gerar").click(function(evt){
+                $("form").attr("action","@Url.Action("Index")");
+                $("form").submit();
+            });
+            $("#proximo").click(function (evt) {
+                let pagina = @Model.Pagina;
+                if (pagina == 4)
+                    pagina = 0;
+                location.href = "https://localhost:44333/" + parseInt(pagina + 1);
+            });
+        });
+    </script>
+}
+
